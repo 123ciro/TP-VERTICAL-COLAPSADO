@@ -172,17 +172,22 @@ and open the template in the editor.
                     $("#show").show();
                     $("#hide").hide();
                     $("#menu").css('width', '50px');
+                    $(".submenu").css('margin-left', '11px');
                     $(".menuopcion").css('width', '50px');
                     $(".titulo").hide();
-                    $("#texto").css('margin-left','55px');
+                    $("#texto").css('margin-left', '55px');
+
                 });
                 $("#show").click(function () {
                     $("#show").hide();
                     $("#hide").show();
                     $(".titulo").show();
                     $("#menu").css('width', '210px');
+                  
                     $(".menuopcion").css('width', '210px');
-                     $("#texto").css('margin-left','220px');
+                      $(".submenu").css('margin-left', '171px');
+                    $("#texto").css('margin-left', '220px');
+
                 });
             });
         </script>

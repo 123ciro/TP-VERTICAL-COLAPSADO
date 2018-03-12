@@ -1,0 +1,124 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+nd open the template in the editor.
+*/
+/* 
+    Created on : 06/03/2018, 07:51:47 AM
+    Author     : oym-dev06
+*/
+body{
+    margin: 0;
+    background-color: azure;
+}
+#titulo{
+    border: 5px solid powderblue ;
+    
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+    margin-left: 150px;
+    margin-right: 150px;
+    font-size: 4vw;
+    position: relative;
+    border-radius: 10px;
+}
+/*MENU PRINCIPAL*/
+/* posicion absoluta al contenido principal*/
+#contenido ul#menu{
+    margin:0;
+    padding:0;
+    position: absolute;
+    margin-top: 20px;
+
+}
+/* el menu principal vertical, sus estilos, de este depende el estilo del submenu*/
+#contenido ul#menu li.menuopcion{
+    background-color:darkgray;
+    width: 210px;
+    height: 50px;
+    position:relative;
+    list-style:none;
+    z-index: 1000;
+
+}
+
+
+/* ESTILO DE LAS LETRAS QUE SON LAS OPCIONES PRINCIPALES DEL MENU */
+#contenido ul#menu li.menuopcion a{
+    padding: 10px;
+    color:black;
+    display:block;
+}/* estilos del texto LOREM IMPSUM*/
+#texto{
+    position: relative;
+    margin-left: 220px;
+    margin-top: 20px;
+}
+
+#contenido ul#menu li.menuopcion:hover a{
+    font-size: 18px;
+    background-color: white;
+    
+}
+
+/**** SUB MENU ****/
+/* el margen que tendra el submenu del menu principal */
+#contenido ul#menu li.menuopcion ul.submenu{
+    position:absolute;
+    display:none;
+    margin-left:171px;
+    top:0px;
+    z-index: 1000;
+}
+/* el color de fondo, de letra, la forma en la que aparecea el titulo del submenu */
+#contenido ul#menu li.menuopcion ul.submenu li.subtitulo{
+    background-color:darkgray;
+    color:black;
+    display:block;
+    width:160px;
+    text-align: center;
+    height: 30px;
+
+}
+#contenido ul#menu li.menuopcion ul.submenu li.subtitulo:hover{
+    background-color: orange;
+
+
+}
+/* el siguiente media query es para cuando la pantalla se este haciendo mas pequeña,
+desapareceran los titulos del menu vertical y quedara un menu vertical colapsado */
+
+@media screen and (max-width: 600px) {
+    
+    #titulo{
+        border: 5px solid powderblue ;
+        text-align: center;
+        margin-top: 10px;
+        position: relative;
+        margin-left: 50px;
+        margin-right: 50px;
+        font-size: 4vw;
+        position: relative;
+        border-radius: 10px;
+    }
+    /* css para hacer desaparecer las letras */
+    ul#menu li.menuopcion a span.titulo{
+        display: none;
+    }
+    #contenido ul#menu li.menuopcion{
+        background-color:darkgray;
+        width:50px;
+    }
+    #contenido ul#menu li.menuopcion ul.submenu{
+        margin-left:11px;
+        top:0px;
+    }
+    #texto{
+        margin-left: 55px;
+    }
+    #orientacion{
+        display: none;
+    }
+}
+
